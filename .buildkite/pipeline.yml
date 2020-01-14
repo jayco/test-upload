@@ -1,12 +1,3 @@
 steps:
-  - commands: echo $$BUILDKITE_AGENT_NAME
+  - commands: echo 'done'
     key: "first"
-
-  - commands: echo $$BUILDKITE_AGENT_NAME
-    key: "second"
-    depends_on:
-      - step: "first"
-
-  - commands: echo $$BUILDKITE_AGENT_NAME
-    depends_on:
-      - step: "second"
