@@ -1,0 +1,18 @@
+steps:
+  - commands: echo $BUILDKITE_AGENT_NAME
+    key: "first"
+    agents:
+      x86-64: "staging"
+
+  - commands: echo $BUILDKITE_AGENT_NAME
+    key: "second"
+    depends_on:
+      - step: "first"
+    agents:
+      label: "omair"
+
+  - commands: echo $BUILDKITE_AGENT_NAME
+    depends_on:
+      - step: "second"
+    agents:
+      label: "mohsin"
