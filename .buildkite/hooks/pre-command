@@ -4,5 +4,4 @@ set -e
 
 git clone  git@github.com:jayco/dummy.git
 
-cd dummy
 ls -a
