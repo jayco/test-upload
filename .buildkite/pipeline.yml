@@ -1,3 +1,7 @@
+notify:
+  - slack: "moss#general"
+    if: build.source == "schedule"
+
 steps:
   - commands: echo 'done'
     key: "first"
