@@ -1,6 +1,6 @@
 notify:
   - slack: "moss#general"
-    if: build.source == "schedule"
+    if: build.source == "webhook"
 
 steps:
   - commands: echo 'done'
