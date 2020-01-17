@@ -1,5 +1,5 @@
 notify:
-  - slack: "moss#general"
+  - slack: "moss#bk"
     if: build.source == "webhook"
 
 steps:
