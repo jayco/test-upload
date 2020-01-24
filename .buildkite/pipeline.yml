@@ -1,9 +1,11 @@
 steps:
   - command: "echo $$BUILDKITE_AGENT_NAME"
     agents:
-        queue: local
+      agent: prod
+  
   - wait
+  
   - command:  "echo $$BUILDKITE_AGENT_NAME"
     agents:
-      x86-64: staging
+      agent: staging
 
