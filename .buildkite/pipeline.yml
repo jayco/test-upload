@@ -1,6 +1,3 @@
-notify:
-  - slack: "moss#bk"
-    if: build.source == "webhook"
 
 steps:
   - commands: "echo $$BUILDKITE_AGENT_NAME"
