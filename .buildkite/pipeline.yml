@@ -1,4 +1,4 @@
 
 steps:
-  - commands:  $$BUILDKITE_AGENT_NAME
+  - commands:  "echo $$BUILDKITE_AGENT_NAME"
     key: "first"
