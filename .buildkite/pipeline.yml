@@ -3,5 +3,5 @@ notify:
     if: build.source == "webhook"
 
 steps:
-  - commands: "echo ${$BUILDKITE_AGENT_NAME}"
+  - commands: "echo $$BUILDKITE_AGENT_NAME"
     key: "first"
