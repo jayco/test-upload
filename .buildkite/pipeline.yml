@@ -1,4 +1,7 @@
-
 steps:
-  - commands:  "echo $BUILDKITE_AGENT_NAME"
-    key: "first"
+  - command: "echo ${$BUILDKITE_AGENT_NAME}"
+  - wait
+  - command:  "echo $$BUILDKITE_AGENT_NAME"
+    agents:
+      x86-64: staging
+
