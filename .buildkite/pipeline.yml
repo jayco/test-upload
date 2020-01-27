@@ -1,6 +1,6 @@
 notify:
   - slack: "moss#bk"
-    if: build.source == "schedule"
+    if: build.state == "passed"
 
 steps:
   - command: "echo DO IT"
