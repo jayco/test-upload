@@ -1,3 +1,7 @@
+notify:
+    - slack: "moss#random"
+    if: build.source == "schedule"
+
 steps:
   - command: "echo $$BUILDKITE_AGENT_NAME"
     label: $BUILDKITE_AGENT_NAME
