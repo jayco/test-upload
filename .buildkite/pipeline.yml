@@ -3,15 +3,5 @@ notify:
     if: build.source == "schedule"
 
 steps:
-  - command: "echo $$BUILDKITE_AGENT_NAME"
-    label: $BUILDKITE_AGENT_NAME
-    agents:
-      agent: prod
-  
-  - wait
-  
-  - command:  "echo $$BUILDKITE_AGENT_NAME"
-    label: $BUILDKITE_AGENT_NAME
-    agents:
-      agent: staging
-
+  - command: "echo DO IT"
+    label: "DO IT!"
