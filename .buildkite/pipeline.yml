@@ -1,5 +1,5 @@
 notify:
-    - slack: "moss#random"
+  - slack: "moss#random"
     if: build.source == "schedule"
 
 steps:
