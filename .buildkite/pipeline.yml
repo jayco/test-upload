@@ -3,5 +3,5 @@ notify:
     if: build.state == "passed"
 
 steps:
-  - command: "echo DO IT"
+  - command: ./sleep.sh
     label: "DO IT!"
