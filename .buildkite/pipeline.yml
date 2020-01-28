@@ -1,7 +1,3 @@
-notify:
-  - slack: "moss#bk"
-    if: build.state == "passed"
-
 steps:
   - command: ./sleep.sh
     label: "DO IT!"
