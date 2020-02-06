@@ -1,5 +1,2 @@
 steps:
-  - command: ./sleep.sh
-    label: "DO IT!"
-    artifact_paths:
-      - "logs/**/*"
+  - command: echo "do it""
