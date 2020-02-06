@@ -1,2 +1,2 @@
 steps:
-  - command: echo "do it""
+  - command: echo "do it"
