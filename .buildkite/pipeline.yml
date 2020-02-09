@@ -1,2 +1,7 @@
-steps:
-  - command: echo "do it"
+- trigger: "bktest-pipeline"
+  label: ":rocket: Deploy"
+  async: true
+  build:
+    message: "${BUILDKITE_MESSAGE}"
+    commit: "${BUILDKITE_COMMIT}"
+    branch: "${BUILDKITE_BRANCH}"
