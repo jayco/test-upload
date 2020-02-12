@@ -1,2 +1,14 @@
 steps:
-  - command: echo "do it""
+  - async: true
+    build:
+      env:
+        BUILDKITE_PULL_REQUEST: "${BUILDKITE_PULL_REQUEST}"
+        BUILDKITE_PULL_REQUEST_REPO: "${BUILDKITE_PULL_REQUEST_REPO}"
+        BUILDKITE_PULL_REQUEST_BASE_BRANCH: "${BUILDKITE_PULL_REQUEST_BASE_BRANCH}"
+      branch: "${BUILDKITE_BRANCH}"
+      commit: "${BUILDKITE_COMMIT}"
+      message: "${BUILDKITE_MESSAGE}"
+    label: "test the things"
+    trigger: "trigger-me"
+  - label: "do stuff"
+    command: echo 'do stuff'
