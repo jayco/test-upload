@@ -8,7 +8,7 @@ steps:
       branch: "${BUILDKITE_BRANCH}"
       commit: "${BUILDKITE_COMMIT}"
       message: "${BUILDKITE_MESSAGE}"
-    label: "test all"
+    label: "test all of it"
     trigger: "trigger-me"
   - label: "do stuff"
     command: echo 'do stuff'
