@@ -1,14 +1,16 @@
+env:
+  branch: "${BUILDKITE_BRANCH}"
+
 steps:
-  - async: true
-    build:
-      env:
-        BUILDKITE_PULL_REQUEST: "${BUILDKITE_PULL_REQUEST}"
-        BUILDKITE_PULL_REQUEST_REPO: "${BUILDKITE_PULL_REQUEST_REPO}"
-        BUILDKITE_PULL_REQUEST_BASE_BRANCH: "${BUILDKITE_PULL_REQUEST_BASE_BRANCH}"
-      branch: "${BUILDKITE_BRANCH}"
-      commit: "${BUILDKITE_COMMIT}"
-      message: "${BUILDKITE_MESSAGE}"
-    label: "test all of it"
-    trigger: "trigger-me"
+  - command: echo "run-unit-tests.sh"
+    key: unit-tests
+
+  - command: "exit 0"
+    concurrency_group: ${branch}
+    concurrency: 1
+
   - label: "do stuffs"
     command: echo 'do stuff'
+
+  - command: "exit 0" # end the critical region foo
+    concurrency_group: ${branch}
