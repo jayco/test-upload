@@ -1,2 +1,2 @@
 # test-upload
-The most amazing repo in the worlds
+The most Amazing repo in the worlds
