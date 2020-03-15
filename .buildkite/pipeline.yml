@@ -39,7 +39,7 @@ steps:
     branches: "master"
 
   - label: "package: Marco Polo"
-    command: "sleep 30s"
+    command: "sleep 30s; echo 'done'"
     artifact_paths:
       - "desktop/bundle/mac/*"
     branches: "master"
