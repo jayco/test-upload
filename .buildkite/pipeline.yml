@@ -2,9 +2,9 @@ steps:
   - label: "build: Auth"
     command: "scripts/build auth"
     env:
-      - INCLUDE_EXTERNAL_SPECS="true"
+      - INCLUDE_EXTERNAL_SPECS=true
     retry:
-      automatic: "${INCLUDE_EXTERNAL_SPECS:-false}"
+      automatic: ${INCLUDE_EXTERNAL_SPECS:-false}
   # - label: "build: User"
   #   command: "scripts/build user"
   # - label: "build: Channels"
