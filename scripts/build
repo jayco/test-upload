@@ -1,3 +1,4 @@
 set -e
 
+echo "from build for:"
 echo $1
