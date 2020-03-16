@@ -4,7 +4,7 @@ steps:
     env:
       - INCLUDE_EXTERNAL_SPECS: true
     retry:
-      automatic: "${INCLUDE_EXTERNAL_SPECS:-false}"
+      automatic: "${INCLUDE_EXTERNAL_SPECS}"
   # - label: "build: User"
   #   command: "scripts/build user"
   # - label: "build: Channels"
