@@ -1,51 +1,44 @@
+env:
+  - INCLUDE_EXTERNAL_SPECS: true
+
 steps:
   - label: "build: Auth"
     command: "scripts/build auth"
-
-  - label: "build: User"
-    command: "scripts/build user"
-
-  - label: "build: Channels"
-    command: "scripts/build channels"
-
-  #  - label: "build: Recommender"
-  #    command: "scripts/build recommender"
-  #
-  #  - label: "build: Analysis"
-  #    command: "scripts/build analysis"
-  #
-  #  - label: "build: Housing"
-  #    command: "scripts/build housing"
-  #
-  #  - label: "build: Bridge"
-  #    command: "scripts/build bridge"
-
-  - label: "build: Budget"
-    command: "scripts/build budget"
-
-  - label: "build: Banking"
-    command: "scripts/build banking"
-
-  - label: "build: Plaid"
-    command: "scripts/build plaid"
-
-  - label: "build: API"
-    command: "scripts/build api"
-
-  - wait
-
-  - label: "deploy: Marco Polo"
-    command: "sleep 30s"
-    branches: "master"
-
-  - label: "package: Marco Polo"
-    command: "sleep 30s; echo 'done'"
-    artifact_paths:
-      - "desktop/bundle/mac/*"
-    branches: "master"
-
-  - wait
-
-  - label: "migrate: Marco Polo"
-    command: "scripts/migrate"
-    branches: "master"
+    retry:
+      automatic: "${INCLUDE_EXTERNAL_SPECS:-false}"
+  # - label: "build: User"
+  #   command: "scripts/build user"
+  # - label: "build: Channels"
+  #   command: "scripts/build channels"
+  # #  - label: "build: Recommender"
+  # #    command: "scripts/build recommender"
+  # #
+  # #  - label: "build: Analysis"
+  # #    command: "scripts/build analysis"
+  # #
+  # #  - label: "build: Housing"
+  # #    command: "scripts/build housing"
+  # #
+  # #  - label: "build: Bridge"
+  # #    command: "scripts/build bridge"
+  # - label: "build: Budget"
+  #   command: "scripts/build budget"
+  # - label: "build: Banking"
+  #   command: "scripts/build banking"
+  # - label: "build: Plaid"
+  #   command: "scripts/build plaid"
+  # - label: "build: API"
+  #   command: "scripts/build api"
+  # - wait
+  # - label: "deploy: Marco Polo"
+  #   command: "sleep 30s"
+  #   branches: "master"
+  # - label: "package: Marco Polo"
+  #   command: "sleep 30s; echo 'done'"
+  #   artifact_paths:
+  #     - "desktop/bundle/mac/*"
+  #   branches: "master"
+  # - wait
+  # - label: "migrate: Marco Polo"
+  #   command: "scripts/migrate"
+  #   branches: "master"
