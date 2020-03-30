@@ -1,3 +1,3 @@
 steps:
   - label: "do stuffs"
-    command: echo 'do stuff'
+    command: echo 'do stuffs'
