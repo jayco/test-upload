@@ -1,6 +1,6 @@
 steps:
   - label: "build: Auth"
-    command: echo "do it again"
+    command: echo "do it"
     # timeout_in_minutes: 1
     # command: sleep 100
   # - label: "build: User"
