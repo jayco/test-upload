@@ -1,6 +1,6 @@
 steps:
   - label: "build: Auth"
-    command: echo "do it staging"
+    command: echo "do it staging, cmon"
     # timeout_in_minutes: 1
     # command: sleep 100
   # - label: "build: User"
