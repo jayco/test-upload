@@ -1,7 +1,8 @@
 steps:
   - label: "build: Auth"
-    timeout_in_minutes: 1
-    command: sleep 100
+    command: echo "do it"
+    # timeout_in_minutes: 1
+    # command: sleep 100
   # - label: "build: User"
   #   command: "scripts/build user"
   # - label: "build: Channels"
