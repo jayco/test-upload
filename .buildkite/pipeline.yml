@@ -1,8 +1,5 @@
 steps:
   - label: "do stuffs"
-    command: echo "do it!"
-    if: build.env("$$RUN_ALL") == "RUN"
-
-  - label: "no stuffs at all"
-    command: echo "nada"
-    if: build.env("$$RUN_ALL") != "RUN"
+    command: echo $$RUN_ALL
+    env:
+      - RUN_ALL="RUN"
