@@ -1,6 +1,6 @@
 steps:
   - label: "do stuffs"
     command: echo $$RUN_ALL
-    if: build.env("RUN_ALL") == "new value"
+    if: build.env("RUN_ALL") == "value"
     env:
-      RUN_ALL: "new value"
+      RUN_ALL: "value"
