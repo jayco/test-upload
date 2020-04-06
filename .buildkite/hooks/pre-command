@@ -2,6 +2,6 @@
 
 set -e
 
-export RUN_ALL="RUN"
+export RUN_ALL=0
 
 printenv
