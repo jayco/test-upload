@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+export RUN_ALL="RUN"
+
+echo "export RUN_ALL=\"RUN\""
