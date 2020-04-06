@@ -2,4 +2,4 @@
 
 set -e
 
-export RUN_ALL=0
+export RUN_ALL="value"
