@@ -3,6 +3,6 @@ steps:
     command: echo "do it!"
     if: build.env("RUN_ALL") == "RUN"
 
-  - label: "no stuffs"
+  - label: "no stuffs at all"
     command: echo "nada"
     if: build.env("RUN_ALL") != "RUN"
