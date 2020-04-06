@@ -1,7 +1,4 @@
-env:
-  RUN_ALL: "RUN"
-
 steps:
   - label: "do stuffs"
-    command: echo $RUN_ALL
-    if: build.env("RUN_ALL") == "RUN"
+    command: echo $$RUN_ALL
+    if: build.env("$RUN_ALL") == "RUN"
