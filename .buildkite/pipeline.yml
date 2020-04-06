@@ -2,6 +2,8 @@ steps:
   - label: "do stuffs"
     command: echo "do it!"
     if: build.env("RUN_ALL") == "RUN"
+    env:
+      - RUN_ALL="RUN"
 
   - label: "no stuffs at all"
     command: echo "nada"
