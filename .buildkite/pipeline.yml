@@ -3,4 +3,4 @@ steps:
     command: echo $$RUN_ALL
     if: build.env("RUN_ALL") == "new value"
     env:
-      RUN_ALL: "some value"
+      RUN_ALL: "new value"
