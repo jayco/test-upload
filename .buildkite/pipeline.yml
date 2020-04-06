@@ -1,3 +1,4 @@
 steps:
   - label: "do stuffs"
-    command: buildkite-agent meta-data get "run_all"
+    command: echo "do it!"
+    if: build.env("RUN_ALL") == "RUN"
