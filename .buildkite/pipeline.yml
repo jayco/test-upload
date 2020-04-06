@@ -1,3 +1,3 @@
 steps:
   - label: "do stuffs"
-    command: echo 'do no stuffs'
+    command: buildkite-agent meta-data get "run_all"
