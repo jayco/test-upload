@@ -1,7 +1,7 @@
 steps:
   - label: "do stuff"
     command: echo "first"
-    key: "first"
+    key: "one"
 
   - label: "this depends on dynamic generated pipeline"
     depends_on: "second"
