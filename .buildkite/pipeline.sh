@@ -1,13 +1,12 @@
 #!/bin/bash
 
 # exit immediately on failure, or if an undefined variable is used
-set -eu
+set -e
 
 a=10
  
 # a: variable is set
 if [[ -v a ]];
-
     # begin the pipeline.yml file
     echo "steps:"
 
@@ -16,5 +15,4 @@ if [[ -v a ]];
     echo "  - command: \"echo "do this"\""
     echo "    label: \"extra step\""
     done
-
 fi
