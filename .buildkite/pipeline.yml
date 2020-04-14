@@ -1,4 +1,3 @@
 steps:
   - label: "do stuff"
     command: echo "first"
-    key: "first"
