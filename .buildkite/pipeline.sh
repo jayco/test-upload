@@ -3,9 +3,10 @@
 # exit immediately on failure, or if an undefined variable is used
 set -eu
 
-export SOME_VALUE=1
-
-if [SOME_VALUE == 1]; then
+a=10
+ 
+# a: variable is set
+if [[ -v a ]];
 
     # begin the pipeline.yml file
     echo "steps:"
