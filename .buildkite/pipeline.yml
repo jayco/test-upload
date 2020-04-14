@@ -1,6 +1,5 @@
 steps:
   - label: "do stuffs"
-    command: echo $$RUN_ALL
-    if: build.env("RUN_ALL") == "value"
-    env:
-      RUN_ALL: "value"
+    command: echo "first"
+  - command: buildkite-agent pipeline upload ./buildkite/dynamic.sh
+    label: ":pipeline: Upload"
