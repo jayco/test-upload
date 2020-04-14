@@ -1,7 +1,0 @@
-#!/bin/bash
-
-set -e
-
-export RUN_ALL="new value"
-
-printenv

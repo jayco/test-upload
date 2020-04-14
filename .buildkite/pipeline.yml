@@ -1,5 +1,3 @@
 steps:
   - label: "do stuff"
     command: echo "first"
-  - command: .buildkite/pipeline.sh | buildkite-agent pipeline upload
-    label: ":pipeline: Upload"
