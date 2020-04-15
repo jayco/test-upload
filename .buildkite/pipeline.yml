@@ -1,6 +1,6 @@
 steps:
   - label: "do stuff"
-    command: echo "first"
+    command: ./test.sh
     key: "step-one"
 
   - label: ":console: Annotation Deployment"
