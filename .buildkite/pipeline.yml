@@ -5,7 +5,7 @@ steps:
 
   - label: ":console: Coverage"
     command: .buildkite/coverage.sh
-    depends_on: "step2"
+    depends_on: "step1"
     key: "step2"
 
   - label: ":console: Annotation Deployment"
