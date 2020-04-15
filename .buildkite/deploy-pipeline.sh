@@ -6,4 +6,4 @@ set -eu
 echo "steps:"
 echo "  - command: \"echo Deploy!\""
 echo "    label: \":rocket:\""
-echo "    key: \"second\""
+echo "    depends_on: \"step two\""

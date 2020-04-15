@@ -1,8 +1,9 @@
 steps:
   - label: "do stuff"
     command: echo "first"
-    key: "first"
+    key: "step one"
 
-  - label: "this depends on dynamic generated pipeline"
-    depends_on: "second"
-    command: echo "second"
+  - label: ":console: Annotation Deployment"
+    depends_on: "step two"
+    command: |
+      buildkite-agent annotate 'Example `default` style' --context 'ctx-default'
