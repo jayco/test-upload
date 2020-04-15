@@ -1,9 +1,9 @@
 steps:
   - label: "do stuff"
     command: echo "first"
-    key: "step one"
+    key: "step-one"
 
   - label: ":console: Annotation Deployment"
-    depends_on: "step two"
+    depends_on: "step-two"
     command: |
       buildkite-agent annotate 'Example `default` style' --context 'ctx-default'

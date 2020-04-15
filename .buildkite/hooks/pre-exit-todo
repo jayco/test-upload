@@ -1,9 +1,7 @@
 #!/bin/bash
 
 set -eu
-
-echo `buildkite-agent step get "outcome" --step "first"`
  
-if [[ "$BUILDKITE_STEP_KEY" == "first" ]]; then
+if [[ "$BUILDKITE_STEP_KEY" == "step-one" ]]; then
     .buildkite/pipeline.sh | buildkite-agent pipeline upload
 fi
