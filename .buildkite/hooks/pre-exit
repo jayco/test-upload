@@ -2,7 +2,7 @@
 
 set -eu
 
-VALUE=buildkite-agent step get "outcome" --step "first"
+VALUE=`buildkite-agent step get "outcome" --step "first"`
 
 echo "$VALUE"
  
