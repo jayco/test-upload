@@ -5,7 +5,7 @@ set -eu
 VALUE=`buildkite-agent step get "outcome" --step "first"`
 
 echo "Here"
-echo $$VALUE
+echo "$VALUE"
  
 if [[ "$BUILDKITE_STEP_KEY" == "first" ]]; then
     .buildkite/pipeline.sh | buildkite-agent pipeline upload
