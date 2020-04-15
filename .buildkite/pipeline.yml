@@ -1,6 +1,6 @@
 steps:
   - label: "do stuff"
-    command: ./test.sh
+    command: .buildkite/test.sh
     key: "step-one"
 
   - label: ":console: Annotation Deployment"
