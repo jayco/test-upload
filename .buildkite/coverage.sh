@@ -2,11 +2,9 @@
 
 set -eu
  
-STEP_ONE=`buildkite-agent step get "outcome" --step "step-two"`
-
 echo "HERE"
-echo "${STEP_ONE}"
+echo `buildkite-agent step get "outcome" --step "step-two"`
 
-if [[ "$STEP_ONE" == "passed" ]]; then
+if [[ `buildkite-agent step get "outcome" --step "step-two"` == "passed" ]]; then
     .buildkite/deploy-pipeline.sh | buildkite-agent pipeline upload
 fi
