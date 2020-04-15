@@ -12,4 +12,4 @@ steps:
     depends_on: "step3"
     key: "step4"
     command: |
-      buildkite-agent annotate 'Example `default` style' --context 'ctx-default'
+      buildkite-agent annotate 'Deployment complete' --context 'ctx-success'
