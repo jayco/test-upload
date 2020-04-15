@@ -1,14 +1,15 @@
 steps:
   - label: ":console: Tests"
     command: "echo we ran tests"
-    key: "step-one"
+    key: "step1"
 
   - label: ":console: Coverage"
     command: .buildkite/coverage.sh
-    key: "step-two"
+    depends_on: "step2"
+    key: "step2"
 
   - label: ":console: Annotation Deployment"
-    depends_on: "step-three"
-    key: "step-four"
+    depends_on: "step3"
+    key: "step4"
     command: |
       buildkite-agent annotate 'Example `default` style' --context 'ctx-default'
