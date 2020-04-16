@@ -1,15 +1,4 @@
 steps:
-  - label: "Tests"
-    command: "echo we ran tests"
-    key: "step1"
-
-  - label: "Generate a Deployment"
-    command: .buildkite/generate_deployment.sh
-    depends_on: "step1"
-    key: "step2"
-
-  - label: "Annotation Generated Deployment"
-    depends_on: "step3"
-    key: "step4"
-    command: |
-      buildkite-agent annotate 'Deployment complete' --context 'ctx-success'
+  - label: "blah"
+    commands:
+      - "scripts/buildkite/do-this.sh"
