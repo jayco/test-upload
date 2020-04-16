@@ -1,14 +1,14 @@
 steps:
-  - label: ":console: Tests"
+  - label: "Tests"
     command: "echo we ran tests"
     key: "step1"
 
-  - label: ":console: Coverage"
+  - label: "Generate a Deployment"
     command: .buildkite/generate_deployment.sh
     depends_on: "step1"
     key: "step2"
 
-  - label: ":console: Annotation Deployment"
+  - label: "Annotation Generated Deployment"
     depends_on: "step3"
     key: "step4"
     command: |
