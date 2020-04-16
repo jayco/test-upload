@@ -1,7 +1,0 @@
-#!/bin/bash
-
-set -eu
- 
-if [[ "$BUILDKITE_STEP_KEY" == "step-one" ]]; then
-    .buildkite/pipeline.sh | buildkite-agent pipeline upload
-fi
