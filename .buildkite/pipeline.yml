@@ -2,3 +2,5 @@ steps:
   - label: "blah"
     commands:
       - "scripts/buildkite/do-this.sh"
+      - "cd /usr/local/var/buildkite-agent/builds/Jasons-MBP-lan-1/test/test-upload"
+      - "scripts/buildkite/do-this.sh"
