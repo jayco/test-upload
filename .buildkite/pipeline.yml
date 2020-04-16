@@ -4,7 +4,7 @@ steps:
     key: "step1"
 
   - label: ":console: Coverage"
-    command: .buildkite/coverage.sh
+    command: .buildkite/generate_deployment.sh
     depends_on: "step1"
     key: "step2"
 
