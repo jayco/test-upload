@@ -1,6 +1,15 @@
 steps:
-  - label: "blah"
-    commands:
-      - "scripts/buildkite/do-this.sh"
-      - "cd /usr/local/var/buildkite-agent/builds/Jasons-MBP-lan-1/test/test-upload"
-      - "scripts/buildkite/do-this.sh"
+  - label: ":console: Tests"
+    command: "echo we ran tests"
+    key: "step1"
+
+  - label: ":console: Coverage"
+    command: .buildkite/coverage.sh
+    depends_on: "step1"
+    key: "step2"
+
+  - label: ":console: Annotation Deployment"
+    depends_on: "step3"
+    key: "step4"
+    command: |
+      buildkite-agent annotate 'Deployment complete' --context 'ctx-success'

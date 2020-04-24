@@ -2,4 +2,4 @@
 
 set -eu
  
-echo "do this was run"
+echo "do"
