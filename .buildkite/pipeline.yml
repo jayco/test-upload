@@ -1,6 +1,8 @@
 steps:
   - label: "build: Auth"
-    command: echo "do it"
+    command: |
+      echo "doing this"
+      buildkite-agent step update "label" "New Label"
     # timeout_in_minutes: 1
     # command: sleep 100
   # - label: "build: User"
