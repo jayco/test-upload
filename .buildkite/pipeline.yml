@@ -1,43 +1,16 @@
 steps:
-  - label: "build: Auth"
-    command: |
-      echo "doing this"
-      buildkite-agent step update "label" "New Label"
-    # timeout_in_minutes: 1
-    # command: sleep 100
-  # - label: "build: User"
-  #   command: "scripts/build user"
-  # - label: "build: Channels"
-  #   command: "scripts/build channels"
-  # #  - label: "build: Recommender"
-  # #    command: "scripts/build recommender"
-  # #
-  # #  - label: "build: Analysis"
-  # #    command: "scripts/build analysis"
-  # #
-  # #  - label: "build: Housing"
-  # #    command: "scripts/build housing"
-  # #
-  # #  - label: "build: Bridge"
-  # #    command: "scripts/build bridge"
-  # - label: "build: Budget"
-  #   command: "scripts/build budget"
-  # - label: "build: Banking"
-  #   command: "scripts/build banking"
-  # - label: "build: Plaid"
-  #   command: "scripts/build plaid"
-  # - label: "build: API"
-  #   command: "scripts/build api"
-  # - wait
-  # - label: "deploy: Marco Polo"
-  #   command: "sleep 30s"
-  #   branches: "master"
-  # - label: "package: Marco Polo"
-  #   command: "sleep 30s; echo 'done'"
-  #   artifact_paths:
-  #     - "desktop/bundle/mac/*"
-  #   branches: "master"
-  # - wait
-  # - label: "migrate: Marco Polo"
-  #   command: "scripts/migrate"
-  #   branches: "master"
+  - command: echo "do it"
+    label: "tests"
+
+  - wait
+
+  - block: ":shipit: Deploy Frontend?"
+    branches: "master"
+  - build:
+      env:
+        BUILDKITE_PULL_REQUEST: "false"
+        BUILDKITE_PULL_REQUEST_REPO: ""
+        BUILDKITE_PULL_REQUEST_BASE_BRANCH: ""
+      message: "Merge pull request #137 from envato/691-custom-elements-products-gallery-block\n\nImplement Elements Image Gallery Block in Gutenberg"
+    label: ":rocket: Deploy Frontend"
+    trigger: "trigger-me"
