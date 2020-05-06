@@ -4,18 +4,18 @@ steps:
       do
          echo "Welcome $i times"
       done
-    parallelism: 3
+    concurrency_group: "a"
 
   - command: |
       for i in {1..50000}
       do
          echo "Welcome $i times"
       done
-    parallelism: 3
+    concurrency_group: "a"
 
   - command: |
       for i in {1..50000}
       do
          echo "Welcome $i times"
       done
-    parallelism: 3
+    concurrency_group: "a"
