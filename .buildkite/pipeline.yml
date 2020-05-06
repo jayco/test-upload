@@ -1,5 +1,6 @@
 steps:
   - command: echo "do it"
+    timeout_in_minutes: 1
     label: "tests"
 
   - wait
