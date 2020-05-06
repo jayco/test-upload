@@ -1,17 +1,18 @@
 steps:
-  - command: echo "do it"
-    timeout_in_minutes: 1
-    label: "tests"
+  - command: |
+      for i in {1..50000}
+      do
+         echo "Welcome $i times"
+      done
 
-  - wait
+  - command: |
+      for i in {1..50000}
+      do
+         echo "Welcome $i times"
+      done
 
-  - block: ":shipit: Deploy Frontend?"
-
-  - build:
-      env:
-        BUILDKITE_PULL_REQUEST: "false"
-        BUILDKITE_PULL_REQUEST_REPO: ""
-        BUILDKITE_PULL_REQUEST_BASE_BRANCH: ""
-      message: "Merge pull request #137 from envato/691-custom-elements-products-gallery-block\n\nImplement Elements Image Gallery Block in Gutenberg"
-    label: ":rocket: Deploy Frontend"
-    trigger: "trigger-me"
+  - command: |
+      for i in {1..50000}
+      do
+         echo "Welcome $i times"
+      done
