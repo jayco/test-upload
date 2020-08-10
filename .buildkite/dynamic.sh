@@ -10,7 +10,7 @@ if [["${BUILDKITE_BUILD_CREATOR_EMAIL}" == "test@example.com"]]; then
     channel = "@slackuser"
 fi
 
-echo $channel
+export channel
 
 echo "steps:"
 echo "    - command: echo 'do this'"
