@@ -12,6 +12,6 @@ fi
 
 
 echo "steps:"
-echo "  - command: echo 'do this'"
+echo "    - command: echo 'do this'"
 echo "notify:"
-echo "  - slack: ${channel}"
+echo "    - slack: @hipcog"
