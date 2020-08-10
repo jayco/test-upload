@@ -6,7 +6,7 @@ set -eu
 channel="#general"
 
 if ["${BUILDKITE_BUILD_CREATOR_EMAIL}" == "test@example.com"]; then
-    echo "FART"
+    exit 1
     channel = "@slackuser"
 fi
 
