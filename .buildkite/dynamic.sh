@@ -14,4 +14,4 @@ fi
 echo "steps:"
 echo "    - command: echo 'do this'"
 echo "notify:"
-echo "    - slack: @hipcog"
+echo "    - slack: \"@hipcog\""
