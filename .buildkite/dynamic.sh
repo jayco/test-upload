@@ -11,8 +11,7 @@ fi
 
 
 
-# begin the pipeline.yml file
-echo "notify:"
-echo "  - slack: ${channel}"
 echo "steps:"
 echo "  - command: echo 'do this'"
+echo "notify:"
+echo "  - slack: ${channel}"
