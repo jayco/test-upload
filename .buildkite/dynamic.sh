@@ -14,6 +14,5 @@ fi
 # begin the pipeline.yml file
 echo "notify:"
 echo "  - slack: ${channel}"
-echo "    if: build.state == \"passed\""
 echo "steps:"
 echo "  - command: echo 'do this'"
