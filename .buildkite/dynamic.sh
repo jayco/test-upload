@@ -5,8 +5,7 @@ set -eu
 
 channel="#general"
 
-if [["${BUILDKITE_BUILD_CREATOR_EMAIL}" == "test@example.com"]]; then
-    exit 1
+if [["${BUILDKITE_BUILD_CREATOR_EMAIL}" != "test@example.com"]]; then
     channel = "@slackuser"
 fi
 
