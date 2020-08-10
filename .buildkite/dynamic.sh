@@ -13,4 +13,4 @@ fi
 echo "steps:"
 echo "    - command: echo 'do this'"
 echo "notify:"
-echo "    - slack: \"${channel}\""
+echo "    - slack: \"${BUILDKITE_BUILD_CREATOR_EMAIL}\""
