@@ -1,3 +1,2 @@
 steps:
-  - command: echo "${BUILDKITE_COMMIT}"
-  - command: .buildkite/dynamic.sh | buildkite-agent pipeline upload
+  - command: echo "${MY_ENV}"
