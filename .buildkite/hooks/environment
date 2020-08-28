@@ -1,1 +1,8 @@
-export MY_ENV="HELLO"
+#!/bin/bash
+set -euo pipefail
+
+if [[ "$BUILDKITE_PIPELINE_SLUG" == "test-upload" ]]; then
+  if [[ "$BUILDKITE_STEP_KEY" == "trigger-github-deploy" ]]; then
+    export GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN="bd0fa963610b..."
+  fi
+fi
