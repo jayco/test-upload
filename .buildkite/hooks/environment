@@ -1,1 +1,1 @@
-MY_ENV="HELLO"
+export MY_ENV="HELLO"
