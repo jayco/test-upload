@@ -1,4 +1,4 @@
 #!/bin/bash
 set -euo pipefail
 
-export THIS_THING="this thing"
+export AMI_ID="this thing"

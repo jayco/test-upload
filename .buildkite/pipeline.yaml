@@ -1,2 +1,2 @@
 steps:
-  - command: echo "${THIS_THING}"
+  - command: echo "${AMI_ID}"
