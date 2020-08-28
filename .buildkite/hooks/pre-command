@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+
+export AMI_ID=buildkite-agent meta-data get AMI_ID
