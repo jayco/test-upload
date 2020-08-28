@@ -1,2 +1,3 @@
 steps:
-  - command: echo "${AMI_ID}"
+  - command: buildkite-agent meta-data set AMI_ID 'somevalue'
+  - command: .buildkite/pipeline.sh | buildkite-agent pipeline upload
