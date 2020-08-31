@@ -1,11 +1,9 @@
 steps:
   - command: |
-    bamboo_buildKey=$BUILDKITE_PIPELINE_SLUG-$BUILDKITE_BUILD_NUMBER
-    bamboo_buildNumber=$BUILDKITE_BUILD_NUMBER
-    bamboo_buildResultKey=$BUILDKITE_PIPELINE_SLUG-$BUILDKITE_BUILD_NUMBER
-    bamboo_buildResultsUrl=$BUILDKITE_BUILD_URL
+      bamboo_buildKey=$BUILDKITE_PIPELINE_SLUG-$BUILDKITE_BUILD_NUMBER
+      bamboo_buildResultKey=$BUILDKITE_PIPELINE_SLUG-$BUILDKITE_BUILD_NUMBER
+      bamboo_buildResultsUrl=$BUILDKITE_BUILD_URL
 
-    echo $bamboo_buildKey
-    echo $bamboo_buildNumber
-    echo $bamboo_buildResultKey
-    echo $bamboo_buildResultsUrl
+      echo $bamboo_buildKey
+      echo $bamboo_buildResultKey
+      echo $bamboo_buildResultsUrl
