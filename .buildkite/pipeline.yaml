@@ -1,3 +1,11 @@
 steps:
-  - command: buildkite-agent meta-data set AMI_ID 'somevalue'
-  - command: .buildkite/pipeline.sh | buildkite-agent pipeline upload
+  - command: |
+    bamboo_buildKey=$BUILDKITE_PIPELINE_SLUG-$BUILDKITE_BUILD_NUMBER
+    bamboo_buildNumber=$BUILDKITE_BUILD_NUMBER
+    bamboo_buildResultKey=$BUILDKITE_PIPELINE_SLUG-$BUILDKITE_BUILD_NUMBER
+    bamboo_buildResultsUrl=$BUILDKITE_BUILD_URL
+
+    echo $bamboo_buildKey
+    echo $bamboo_buildNumber
+    echo $bamboo_buildResultKey
+    echo $bamboo_buildResultsUrl
