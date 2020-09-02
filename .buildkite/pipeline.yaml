@@ -3,6 +3,12 @@ notify:
       channels:
         - "moss#bk"
       message: "${BUILDKITE_BUILD_AUTHOR} ${BUILDKITE_REPO}"
+      if: build.state == "unblocked"
 
 steps:
-  - command: "echo this"
+  - block: "Request Release"
+    fields:
+      - text: "Code Name"
+        key: "release-name"
+
+  - command: echo "doing the unblocked thing"
