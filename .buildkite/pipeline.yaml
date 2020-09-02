@@ -1,9 +1,8 @@
-steps:
-  - command: |
-      bamboo_buildKey=$BUILDKITE_PIPELINE_SLUG-$BUILDKITE_BUILD_NUMBER
-      bamboo_buildResultKey=$BUILDKITE_PIPELINE_SLUG-$BUILDKITE_BUILD_NUMBER
-      bamboo_buildResultsUrl=$BUILDKITE_BUILD_URL
+notify:
+  - slack:
+      channels:
+        - "moss#bk"
+      message: "${BUILDKITE_BUILD_AUTHOR} ${BUILDKITE_REPO}"
 
-      echo $bamboo_buildKey
-      echo $bamboo_buildResultKey
-      echo $bamboo_buildResultsUrl
+steps:
+  - command: "echo this"
