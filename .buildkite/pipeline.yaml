@@ -3,7 +3,7 @@ notify:
       channels:
         - "moss#bk"
       message: "${BUILDKITE_BUILD_AUTHOR} ${BUILDKITE_REPO}"
-    if: job.state == "unblocked"
+    if: build.state == "blocked"
 
 steps:
   - block: "Request Release"
