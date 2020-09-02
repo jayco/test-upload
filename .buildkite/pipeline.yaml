@@ -2,7 +2,7 @@ notify:
   - slack:
       channels:
         - "moss#bk"
-      message: "${BUILDKITE_BUILD_AUTHOR} ${BUILDKITE_REPO}"
+      message: "${BUILDKITE_BUILD_AUTHOR} unblocked ${BUILDKITE_REPO}"
 
 steps:
   - block: "Request Release"
