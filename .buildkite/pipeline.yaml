@@ -1,13 +1,9 @@
-notify:
-  - slack:
-      channels:
-        - "moss#bk"
-      message: "${BUILDKITE_BUILD_AUTHOR} unblocked ${BUILDKITE_REPO}"
-
 steps:
-  - block: "Request Release"
-    fields:
-      - text: "Code Name"
-        key: "release-name"
-
-  - command: echo "doing the unblocked thing"
+  - name: ":hammer: Example Script"
+    command: "./script.sh"
+    artifact_paths: "artifacts/*"
+    plugins:
+      docker#v3.7.0:
+        run: bash
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
