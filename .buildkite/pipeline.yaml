@@ -6,6 +6,6 @@ steps:
       /Users/jj/bk/plugins/docker-buildkite-plugin#stuff:
         image: bash
         run: bash
-        fugs: host
+        pid: host
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
