@@ -6,6 +6,6 @@ steps:
       docker#v3.7.0:
         image: ubuntu
         run: bash
-        mount-buildkite-agent: true
+        volumes: "/usr/local/bin/buildkite-agent:/usr/local/var/buildkite-agent/builds/Jasons-MBP-2-lan-1/test/test-upload"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
