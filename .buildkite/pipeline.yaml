@@ -4,6 +4,7 @@ steps:
     artifact_paths: "artifacts/*"
     plugins:
       docker#v3.7.0:
+        image: ubuntu
         run: bash
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
