@@ -3,7 +3,7 @@ steps:
     command: "./script.sh"
     artifact_paths: "artifacts/*"
     plugins:
-      docker#v3.7.0:
+      /Users/jj/bk/plugins/docker-buildkite-plugin:
         image: "bash"
         run: bash
     agents:
