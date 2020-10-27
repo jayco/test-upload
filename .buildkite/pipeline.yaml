@@ -1,0 +1,12 @@
+steps:
+  - label: "test"
+    parallelism: 3
+    commands: |
+      if [ "$$BUILDKITE_PARALLEL_JOB" -eq "0" ]; then
+        sleep 30
+      elif [ "$$BUILDKITE_PARALLEL_JOB" -eq "1" ]; then
+        sleep 1
+      else
+        sleep 10
+        exit 0
+      fi
