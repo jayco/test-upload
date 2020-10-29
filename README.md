@@ -1,2 +1,2 @@
 test
-do somethi
+do someth
