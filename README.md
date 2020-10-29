@@ -1,1 +1,1 @@
-test it all
+test it
